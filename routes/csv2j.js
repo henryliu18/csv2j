@@ -13,7 +13,7 @@ router.use(fileUpload({
 }));
 
 
-router.post('/', async (req, res) => {
+router.post('/upload', async (req, res) => {
     try {
         if(!req.files) {
             res.send({
