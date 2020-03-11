@@ -1,4 +1,6 @@
 FROM node
+ARG http_proxy
+ARG https_proxy
 WORKDIR /api
 COPY *.js /api/
 COPY routes/ /api/
