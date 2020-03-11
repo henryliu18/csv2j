@@ -1,0 +1,32 @@
+{
+  "name": "expressapi",
+  "version": "1.0.0",
+  "description": "```docker build . -t api```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henryliu18/expressapi.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/henryliu18/expressapi/issues"
+  },
+  "homepage": "https://github.com/henryliu18/expressapi#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.6",
+    "lodash": "^4.17.15",
+    "morgan": "^1.9.1"
+  }
+}

@@ -1,20 +1,23 @@
-const fileUpload = require('express-fileupload');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const morgan = require('morgan');
-const _ = require('lodash');
-const csv=require('csvtojson');
-
 // @desc    Get Json
 // @route   GET /api/csv2j/:f
 // @access  Public
 exports.getJson = (req, res, next) => {
+    const csv=require('csvtojson');
+    const fs = require('fs');
     const csvFilePath = './uploads/' + req.params.f
-    csv()
-        .fromFile(csvFilePath)
-        .then((jsonObj) => {
-            res.send(jsonObj);
+    if (fs.existsSync(csvFilePath)) {
+        csv()
+            .fromFile(csvFilePath)
+            .then((jsonObj) => {
+                res.send(jsonObj);
+            });
+    } else {
+        res.status(400).send({
+            status: false,
+            message: 'File does not exist',
+            data: req.params.f
         })
+    }
 }
 
 // @desc    Upload Csv
@@ -22,7 +25,7 @@ exports.getJson = (req, res, next) => {
 // @access  Public
 exports.uploadCsv = (req, res, next) => {
     try {
-        if(!req.files) {
+        if (!req.files) {
             res.send({
                 test: req,
                 status: false,

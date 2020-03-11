@@ -1,4 +1,6 @@
 test/
 archives/
 node_modules/
+uploads/
 config/config.env
+package-lock.json
