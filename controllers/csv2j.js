@@ -1,4 +1,4 @@
-// @desc    Get Json
+// @desc    Convert CSV to Json => Response Json
 // @route   GET /api/csv2j/:f
 // @access  Public
 exports.getJson = (req, res, next) => {
@@ -20,7 +20,7 @@ exports.getJson = (req, res, next) => {
     }
 }
 
-// @desc    Upload Csv
+// @desc    Upload file
 // @route   POST /api/csv2j/upload
 // @access  Public
 exports.uploadCsv = (req, res, next) => {
