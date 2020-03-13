@@ -2,5 +2,5 @@ test/
 archives/
 node_modules/
 uploads/
-config/config.env
+config/cred.env
 package-lock.json
