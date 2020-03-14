@@ -7,8 +7,6 @@ COPY ./index.js /api/
 COPY ./routes/* /api/routes/
 COPY ./controllers/* /api/controllers/
 COPY ./config/* /api/config/
-COPY ./db/* /api/db/
-COPY ./models/* /api/models/
 WORKDIR /api
 RUN npm install express cors express-fileupload morgan lodash csvtojson dotenv --save
 CMD [ "node","/api/index.js" ]

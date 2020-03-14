@@ -2,6 +2,4 @@ test/
 archives/
 node_modules/
 uploads/
-_data/
-config/
 package-lock.json
