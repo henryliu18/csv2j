@@ -1,7 +1,7 @@
 FROM node
 ARG http_proxy
 ARG https_proxy
-RUN mkdir -p /api/routes; mkdir -p /api/controllers; mkdir -p /api/config; mkdir -p /api/db; mkdir -p /api/models
+RUN mkdir -p /api/routes; mkdir -p /api/controllers; mkdir -p /api/config
 WORKDIR /api
 COPY ./index.js /api/
 COPY ./routes/* /api/routes/
